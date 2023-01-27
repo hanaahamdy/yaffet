@@ -3,9 +3,9 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:training/core/utils/tesxts.dart';
 
-import '../../core/cubits/app_bloc.dart';
-import '../../core/cubits/app_states.dart';
-import '../../core/utils/colors.dart';
+import '../cubits/app_bloc.dart';
+import '../cubits/app_states.dart';
+import '../utils/colors.dart';
 
 class CustomDropDownButton extends StatelessWidget {
   final List<String> dropDownItems;
@@ -23,7 +23,7 @@ class CustomDropDownButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AppBloc, AppStates>(builder: (contex, statet) {
-      AppBloc cubit = AppBloc.get(context);
+
       return DropdownButtonFormField(
 
           validator: (value) {

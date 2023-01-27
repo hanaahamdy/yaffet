@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:training/features/bar/data/chartBloc/Chartloc.dart';
+import 'package:training/core/cubits/app_bloc.dart';
 
 import 'AlertForHighestPriceResult.dart';
 
-AlertDialog AlertforselectRadio({required ChartBloc cubit,required BuildContext context}) {
+Widget AlertforselectRadio({required AppBloc cubit,required BuildContext context}) {
   return AlertDialog(
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12)),

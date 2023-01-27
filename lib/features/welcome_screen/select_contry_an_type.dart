@@ -5,8 +5,8 @@ import 'package:training/core/utils/colors.dart';
 import 'package:training/features/home/presentation/home_page.dart';
 import '../../core/cubits/app_bloc.dart';
 import '../../core/cubits/app_states.dart';
-import '../shared/dropDownButton.dart';
-import '../shared/default_button.dart';
+import '../../core/shared/dropDownButton.dart';
+import '../../core/shared/default_button.dart';
 
 class welcome_screen extends StatelessWidget {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();

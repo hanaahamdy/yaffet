@@ -6,6 +6,7 @@ class CountryState extends AppStates{}
 class WeightUnitState extends AppStates{}
 class GoldPurityState extends AppStates{}
 class CurrencyState extends AppStates{}
+class RadioButtonState extends AppStates{}
 
 
 

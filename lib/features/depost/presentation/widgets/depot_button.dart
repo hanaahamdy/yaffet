@@ -1,5 +1,5 @@
 import '../../../../core/utils/colors.dart';
-import '../../../shared/default_button.dart';
+import '../../../../core/shared/default_button.dart';
 
 DefaultButton depotButton() {
   return DefaultButton(

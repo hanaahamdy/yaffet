@@ -1,14 +1,10 @@
 import 'package:flutter/cupertino.dart';
-import '../../data/chartBloc/Chartloc.dart';
 import 'build_row.dart';
-
 import '../../../../core/cubits/app_bloc.dart';
-
-import '../../../../core/utils/colors.dart';
-import '../../../shared/dropDownButton.dart';
+import '../../../../core/shared/dropDownButton.dart';
 
 Widget DropDownGoldPurityUnit({
-   required ChartBloc cubit,}) {
+   required AppBloc cubit,}) {
   return ChartPageItemField(
     leading: "Gold Purity",
     child: Expanded(

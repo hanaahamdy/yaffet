@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/colors.dart';
-import '../../../depost/presentation/widgets/buil_formField.dart';
+import '../../../../core/shared/buil_formField.dart';
 import 'build_row.dart';
 
 Widget weightValueFormField(

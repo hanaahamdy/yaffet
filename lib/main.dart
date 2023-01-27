@@ -5,7 +5,7 @@ import 'package:training/core/cubits/app_bloc.dart';
 import 'package:training/core/utils/colors.dart';
 
 import 'core/utils/bloc_observer.dart';
-import 'features/bar/presentation/chart__screen.dart';
+
 import 'features/welcome_screen/select_contry_an_type.dart';
 import 'features/home/presentation/home_page.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AppBloc(),
-      child: MaterialApp(
+      child: MaterialApp(routes: {"home":(context)=>HomePage()},
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.grey[100],

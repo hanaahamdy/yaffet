@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:training/core/utils/colors.dart';
 import 'package:training/core/utils/tesxts.dart';
-import 'package:training/features/shared/default_button.dart';
 
 class HighestPriceResult extends StatelessWidget {
   @override

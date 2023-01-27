@@ -1,10 +1,9 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:training/core/cubits/app_bloc.dart';
 import 'package:training/core/utils/colors.dart';
 import 'package:training/core/utils/tesxts.dart';
-import '../data/chartBloc/ChartStates.dart';
-import '../data/chartBloc/Chartloc.dart';
+import '../../../core/cubits/app_states.dart';
 import '../widgets/page_titels/SelectedCountryInChartPage.dart';
 import '../widgets/build_table.dart';
 import '../widgets/buttons/calculate_button.dart';
@@ -25,11 +24,9 @@ class ChartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
 
-    return BlocProvider(
-      create: (context) => ChartBloc(),
-      child: BlocBuilder<ChartBloc, ChartStates>(
+    return  BlocBuilder<AppBloc, AppStates>(
         builder: (context, state) {
-          ChartBloc cubit = ChartBloc.get(context);
+          AppBloc cubit = AppBloc.get(context);
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: SingleChildScrollView(
@@ -77,7 +74,7 @@ class ChartPage extends StatelessWidget {
             ),
           );
         },
-      ),
+
     );
   }
 }

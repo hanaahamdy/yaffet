@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:training/core/cubits/app_bloc.dart';
 
 import '../../../../core/utils/colors.dart';
-import '../../../shared/default_button.dart';
-import '../../data/chartBloc/Chartloc.dart';
+import '../../../../core/shared/default_button.dart';
 import '../dialogs/AlertForRadioButtonSelction.dart';
 
-DefaultButton GetAnotherButton({required BuildContext context,required ChartBloc cubit}) {
+DefaultButton GetAnotherButton(
+    {required BuildContext context, required AppBloc cubit}) {
   return DefaultButton(
     buttonAction: () {
-      AlertforselectRadio(context:context, cubit: cubit);
+      Navigator.pop(context);
+      AlertforselectRadio(cubit: cubit,context: context);
     },
     buttonLabel: "Get another",
     buttonBackgroundColor: darkGrey,

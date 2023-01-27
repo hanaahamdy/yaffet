@@ -4,12 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:training/core/cubits/app_bloc.dart';
 import 'package:training/core/cubits/app_states.dart';
 
-import '../../../../core/utils/colors.dart';
-import '../../../../core/utils/tesxts.dart';
-import '../../../person_alert/presentation/widgets/alert_item.dart';
-import '../../../person_alert/presentation/widgets/buildAlertListView.dart';
-import '../widgets/depotListView.dart';
-import '../widgets/depot_button.dart';
+
+import '../widgets/First_Part_In_Depot_Screen.dart';
+import '../widgets/SecondPartInDepotScreen.dart';
+
 
 class DepostScreen extends StatelessWidget {
   @override
@@ -18,32 +16,21 @@ class DepostScreen extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     return BlocBuilder<AppBloc, AppStates>(builder: (context, state) {
       return Scaffold(
-          body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: AppText(
-                text: "My Depot",
-                fontSize: 16,
-                textColor: blackColor,
-                fontWeight: FontWeight.bold,
+          body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              FirstPartInDepotScreen(screenHeight, screenWidth),
+              SizedBox(
+                height: screenHeight * .01,
               ),
-            ),
-            SizedBox(
-              height: screenHeight * .05,
-            ),
-            DepotListView(screenHeight, screenWidth),
-            SizedBox(
-              height: screenHeight * .02,
-            ),
-            depotButton()
-          ],
+              SecondPartInDepotScreen()
+            ],
+          ),
         ),
       ));
     });
   }
+
 }

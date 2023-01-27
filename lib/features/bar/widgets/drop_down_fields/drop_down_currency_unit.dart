@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../data/chartBloc/Chartloc.dart';
 import 'build_row.dart';
 
 import '../../../../core/cubits/app_bloc.dart';
-import '../../../../core/utils/colors.dart';
 
-import '../../../shared/dropDownButton.dart';
+
+import '../../../../core/shared/dropDownButton.dart';
 
 Widget DropDownCurrencyUnit(
     {
-    required ChartBloc cubit}) {
+    required AppBloc cubit}) {
   return ChartPageItemField(
       leading: "Currency",
       child: Expanded(

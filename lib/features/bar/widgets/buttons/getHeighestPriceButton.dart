@@ -1,21 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:training/core/utils/tesxts.dart';
-import '../dialogs/AlertForHighestPriceResult.dart';
+import '../../../../core/cubits/app_bloc.dart';
 import '../dialogs/AlertForRadioButtonSelction.dart';
-import '../getHighestPriceRsult.dart';
 import '../../../../core/utils/colors.dart';
-import '../../../shared/default_button.dart';
-import '../../data/chartBloc/Chartloc.dart';
+import '../../../../core/shared/default_button.dart';
 
 DefaultButton getHeighestPriceButton(
-    {required BuildContext context, required ChartBloc cubit}) {
+    {required BuildContext context, required AppBloc cubit}) {
   return DefaultButton(
     buttonAction: () {
-      showDialog(
+      showDialog(barrierDismissible:false,
           context: context,
           builder: (context) {
-            return AlertforselectRadio( cubit: cubit,context:context);
+            return AlertforselectRadio(cubit: cubit, context: context);
           });
     },
     buttonLabel: "Get highest Price",

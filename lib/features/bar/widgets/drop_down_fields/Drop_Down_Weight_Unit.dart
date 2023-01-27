@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/cubits/app_bloc.dart';
 
-import '../../../../core/utils/colors.dart';
-import '../../data/chartBloc/Chartloc.dart';
 import 'build_row.dart';
-import '../../../shared/dropDownButton.dart';
+import '../../../../core/shared/dropDownButton.dart';
 
 Widget DropDownWeightUnit(
     {
 
-    required ChartBloc cubit}) {
+    required AppBloc cubit}) {
   return ChartPageItemField(
       leading: "Weight Unit",
 //      screenHeight: screenHeight * .05,
