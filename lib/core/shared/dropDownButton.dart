@@ -23,9 +23,7 @@ class CustomDropDownButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AppBloc, AppStates>(builder: (contex, statet) {
-
       return DropdownButtonFormField(
-
           validator: (value) {
             if (value?.isEmpty ?? true) {
               return "please select First";
@@ -35,12 +33,14 @@ class CustomDropDownButton extends StatelessWidget {
             text: dropdownHintText,
             textColor: Colors.grey,
           ),
-          decoration: InputDecoration(fillColor: whiteColor,filled: true,
-            contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+          decoration: InputDecoration(
+              fillColor: whiteColor,
+              filled: true,
+              contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-              focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12))),
+              focusedBorder:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(12))),
           value: selected,
           items: dropDownItems
               .map((e) => DropdownMenuItem(

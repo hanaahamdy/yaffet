@@ -1,20 +1,22 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:training/core/utils/colors.dart';
 
 class BuildTextFormField extends StatelessWidget {
   final String hint;
-Icon?prefixIcon;
+  Icon? prefixIcon;
   final void Function(String?)? onsaved;
   final TextEditingController? controller;
 
-   BuildTextFormField(
-      {super.key, required this.hint, this.onsaved, this.controller,this.prefixIcon});
+  BuildTextFormField(
+      {super.key,
+      required this.hint,
+      this.onsaved,
+      this.controller,
+      this.prefixIcon});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
       controller: controller,
       onSaved: onsaved,
       validator: (value) {
@@ -24,8 +26,8 @@ Icon?prefixIcon;
           return null;
         }
       },
-      decoration: InputDecoration(
-        prefixIcon:prefixIcon!=null? Icon(Icons.title):null,
+      decoration: InputDecoration(fillColor: whiteColor,filled: true,
+          prefixIcon: prefixIcon != null ? Icon(Icons.title) : null,
           hintText: hint,
           enabledBorder: buildOutlineInputBorder(),
           focusedBorder: buildOutlineInputBorder()),
@@ -35,6 +37,6 @@ Icon?prefixIcon;
 
 OutlineInputBorder buildOutlineInputBorder() {
   return OutlineInputBorder(
-      borderSide: BorderSide(color:  Colors.grey),
+      borderSide: BorderSide(color: Colors.grey),
       borderRadius: BorderRadius.circular(10));
 }

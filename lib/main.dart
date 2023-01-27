@@ -6,6 +6,7 @@ import 'package:training/core/utils/colors.dart';
 
 import 'core/utils/bloc_observer.dart';
 
+import 'features/depost/presentation/DepotBloc/depotBloc.dart';
 import 'features/welcome_screen/select_contry_an_type.dart';
 import 'features/home/presentation/home_page.dart';
 
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => AppBloc(),
-      child: MaterialApp(routes: {"home":(context)=>HomePage()},
+    return MultiBlocProvider(
+      providers: [BlocProvider(create: (context) => AppBloc()),BlocProvider(create: (context) => DepotBloc())],
+      child: MaterialApp(
+        routes: {"home": (context) => HomePage()},
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.grey[100],
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
               type: BottomNavigationBarType.fixed),
           primarySwatch: Colors.blue,
         ),
-        home:welcome_screen(),
+        home: welcome_screen(),
       ),
     );
   }

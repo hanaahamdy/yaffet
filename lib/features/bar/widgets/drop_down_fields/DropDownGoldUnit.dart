@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'build_row.dart';
+import '../../../../core/shared/build_row.dart';
 import '../../../../core/cubits/app_bloc.dart';
 import '../../../../core/shared/dropDownButton.dart';
 
 Widget DropDownGoldPurityUnit({
    required AppBloc cubit,}) {
-  return ChartPageItemField(
+  return RowOfLeadingAndDropDown(
     leading: "Gold Purity",
     child: Expanded(
       child: CustomDropDownButton(
