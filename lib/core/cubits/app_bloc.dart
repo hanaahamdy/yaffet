@@ -19,6 +19,7 @@ class AppBloc extends Cubit<AppStates> {
     return BlocProvider.of(context);
   }
 
+  TextEditingController WeightValueController = TextEditingController();
   int currentIndex = 0;
 
   void bottomNavChange(int index) {

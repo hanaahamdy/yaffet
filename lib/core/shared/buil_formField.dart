@@ -16,21 +16,24 @@ class BuildTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      onSaved: onsaved,
-      validator: (value) {
-        if (value?.isEmpty ?? true) {
-          return "field is required and can't be empty";
-        } else {
-          return null;
-        }
-      },
-      decoration: InputDecoration(fillColor: whiteColor,filled: true,
-          prefixIcon: prefixIcon != null ? Icon(Icons.title) : null,
-          hintText: hint,
-          enabledBorder: buildOutlineInputBorder(),
-          focusedBorder: buildOutlineInputBorder()),
+    return Container(height: 45,
+
+      child: TextFormField(
+        controller: controller,
+        onSaved: onsaved,
+        validator: (value) {
+          if (value?.isEmpty ?? true) {
+            return "field is required and can't be empty";
+          } else {
+            return null;
+          }
+        },
+        decoration: InputDecoration(fillColor: whiteColor,filled: true,
+            prefixIcon: prefixIcon != null ? Icon(Icons.title) : null,
+            hintText: hint,
+            enabledBorder: buildOutlineInputBorder(),
+            focusedBorder: buildOutlineInputBorder()),
+      ),
     );
   }
 }
